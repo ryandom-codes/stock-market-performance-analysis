@@ -100,8 +100,27 @@ docs/      Methods and follow-up design
 data/      Local downloads, excluded from Git
 ```
 
-## Limitations and next steps
+## Limitations
 
 These are familiar companies selected retrospectively, not a complete historical stock universe. Adjusted data can be revised, stocks share market shocks, and classification accuracy doesn’t establish trading returns. The project doesn’t simulate transaction costs or actual order execution.
 
-Next, I want to finish reviewing the additional experiments and investigate whether these signals are more useful for forecasting risk than direction. Any claim of dependable prediction would need a prospective test with predictions recorded before the outcomes are known.
+## Where I want to take this
+
+My next goal is to train and compare direction models across different timeframes. I want to find out whether the same signals behave differently over a day, a week, or a month, rather than assuming a longer forecast is easier.
+
+| Planned horizon | Question |
+|---|---|
+| Next trading day | Will the adjusted close be higher after 1 session? |
+| About one week | Will it be higher after 5 trading sessions? |
+| About one month | Will it be higher after 21 trading sessions? |
+
+The current code covers only the next-day target. The weekly and monthly models are planned work. Each will need its own labels, baseline, training process, and chronological evaluation. I'll remove training rows whose future labels reach into the next evaluation period; longer, overlapping targets also need uncertainty estimates that account for that dependence.
+
+Other directions I'd like to explore:
+
+- **Risk forecasts:** test whether recent data helps estimate the size of future moves, even when direction is difficult.
+- **Explanations:** investigate which features influence predictions and whether those relationships change across periods.
+- **A simple results dashboard:** compare horizons, model scores, and baselines without presenting a score as an investment recommendation.
+- **Prospective evaluation:** record a fixed model's predictions before the outcomes arrive, then measure how it holds up on genuinely new data.
+
+I'll continue using Hermes agents and Codex to help with bounded experiments, implementation, and review. New findings will stay in the private research workspace until their code and evidence are checked. The goal is to build a stronger, understandable project over time—not to promise a prediction accuracy or trading return that the evidence doesn't support.
