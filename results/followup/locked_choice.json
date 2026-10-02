@@ -1,0 +1,7 @@
+{
+  "model": "Logistic Regression",
+  "threshold": 0.45,
+  "validation_mean_accuracy": 0.5314175566809068,
+  "validation_mean_always_up_accuracy": 0.5302835285364565,
+  "preferred_on_validation": true
+}

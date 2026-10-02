@@ -1,0 +1,6 @@
+split,model,accuracy,balanced_accuracy,precision_up,recall_up,f1_up,roc_auc
+validation,Majority baseline,0.513500,0.500000,0.513500,1.000000,0.678560,0.500000
+validation,Logistic Regression,0.504500,0.504368,0.517822,0.509250,0.513500,0.494665
+validation,Random Forest,0.504750,0.505355,0.519100,0.482960,0.500378,0.496547
+test,Majority baseline,0.546906,0.500000,0.546906,1.000000,0.707097,0.500000
+test,Logistic Regression,0.485529,0.487148,0.533679,0.469891,0.499757,0.483860

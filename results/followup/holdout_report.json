@@ -1,0 +1,53 @@
+{
+  "choice": {
+    "model": "Logistic Regression",
+    "threshold": 0.45,
+    "validation_mean_accuracy": 0.5314175566809068,
+    "validation_mean_always_up_accuracy": 0.5302835285364565,
+    "preferred_on_validation": true
+  },
+  "development_source": {
+    "provider": "Yahoo Finance via yfinance",
+    "auto_adjust": true,
+    "start_inclusive": "2015-01-01",
+    "end_exclusive": "2026-01-01",
+    "tickers": [
+      "AAPL",
+      "MSFT",
+      "AMZN",
+      "GOOGL",
+      "JPM",
+      "JNJ",
+      "XOM",
+      "WMT",
+      "SPY"
+    ],
+    "downloaded_at_utc": "2026-10-01T18:03:56.842890+00:00",
+    "sha256": "e3cceefec765b8f2b7f3c9098ecde4bde3bd9cdf13574e9b09c7ca505f13655a"
+  },
+  "holdout_source": {
+    "provider": "Yahoo Finance via yfinance",
+    "start": "2025-10-01",
+    "end_exclusive": "2026-10-01",
+    "auto_adjust": true,
+    "downloaded_at_utc": "2026-10-01T18:27:58.356871+00:00",
+    "sha256": "668a37da207885c686f9a359f2144ff606eaf342c6656282680c02b986e87966"
+  },
+  "feature_start": "2026-01-02",
+  "feature_end": "2026-09-29",
+  "last_label_date": "2026-09-30",
+  "rows": 1488,
+  "market_days": 186,
+  "coverage": 1.0,
+  "predicted_down_fraction": 0.006720430107526882,
+  "accuracy_gain": 0.0040322580645161255,
+  "accuracy_gain_95pct_block_interval": [
+    0.0,
+    0.009408602150537635
+  ],
+  "bootstrap": {
+    "block_sessions": 10,
+    "draws": 2000,
+    "seed": 42
+  }
+}
