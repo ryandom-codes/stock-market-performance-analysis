@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+data/*
+!data/.gitkeep
+.DS_Store
+.vscode/
+
+# Research coordination belongs in the separate development workspace.
+results/agent_experiments/
+*HANDOFF*
+*HERMES*GUIDE*
+*AI*ROADMAP*
+*.log
